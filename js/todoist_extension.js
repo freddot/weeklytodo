@@ -34,9 +34,10 @@ var todoistInterface = (function(){
         },
         
         callback: function(response) {
-            
+            document.write('fedt!');
+
             objlog(response);
-            
+            log("FEDT!");
         }
     };
 })();
