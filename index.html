@@ -1,9 +1,19 @@
 <html>
 <head id="head">
-<title>Freddots todoist week extension</title>
-<script src="js/todoist_extension.js" type="text/javascript"></script>
+<title>Freddots todoist simplifier and week extension</title>
+<script src="js/todoist_extension.js" type="text/javascript" id="source"></script>
 </head>
-<body bgcolor="#99CC99">
+<body>
+<h1>todoist simplifier and week ext.</h1>
+<h2 id="title">login</h2>
+<div id="message"></div>
+<div id="login_view">
+    email: <input type="text" id="email" /><br />
+    password: <input type="password" id="password" /><br />
+    <input type="button" value="login" onclick="weeklyTodoGUI.login()" />
+</div>
+<div id="weekly_view">
+</div>
 
 </body>
 </html>
