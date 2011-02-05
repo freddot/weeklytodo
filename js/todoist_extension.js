@@ -1,4 +1,4 @@
-
+// lets hoppas fedt nu... :D
 var debug = true;
 var log = function(str) {
     if (debug) {
@@ -34,10 +34,9 @@ var todoistInterface = (function(){
         },
         
         callback: function(response) {
-            document.write('fedt!');
 
             objlog(response);
-            log("FEDT!");
+            
         }
     };
 })();
