@@ -1,0 +1,36 @@
+<html>
+
+<head id="head">
+<title>what todo</title>
+<link rel="stylesheet" type="text/css" href="style/style.css" />
+<script src="js/debug.js" type="text/javascript" id="debug"></script>
+<script src="js/dateext.js" type="text/javascript" id="dateext"></script>
+<script src="js/helper.js" type="text/javascript" id="helper"></script>
+<script src="js/api.js" type="text/javascript" id="api"></script>
+<script src="js/gui.js" type="text/javascript" id="gui"></script>
+</head>
+
+<body onload="gui.init()">
+    <div id="page">
+        <div id="logo">
+        <h1 class="header">what todo</h1>
+        <h2 class="header" id="title"></h2>
+        </div>
+        <div id="subtitle_div"><a onclick="gui.action(gui.actions.PREVWEEK);" href="#"><<</a>
+            <h3 id="subtitle" style=""></h3>
+            <a onclick="gui.action(gui.actions.NEXTWEEK);" href="#">>></a>
+        </div>
+        
+        <div class="margin" id="commands"><a onclick="gui.action(gui.actions.BEGINNEWTASK);" href="#">add</a> | <a onclick="gui.action(gui.actions.RELOADTASKS);" href="#">reload</a>
+        </div>
+        
+        <div id="tasks"></div>
+        
+        <div class="margin" id="message"></div>
+    </div>
+    
+    <div id="showEdit"></div>
+
+</body>
+
+</html>
