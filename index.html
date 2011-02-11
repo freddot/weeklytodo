@@ -1,19 +1,25 @@
 <html>
+
 <head id="head">
 <title>Freddots todoist simplifier and week extension</title>
-<script src="js/todoist_extension.js" type="text/javascript" id="source"></script>
+<link rel="stylesheet" type="text/css" href="style/mystyle.css" />
+<script src="js/debug.js" type="text/javascript" id="debug"></script>
+<script src="js/dateext.js" type="text/javascript" id="dateext"></script>
+<script src="js/helper.js" type="text/javascript" id="helper"></script>
+<script src="js/api.js" type="text/javascript" id="api"></script>
+<script src="js/gui.js" type="text/javascript" id="gui"></script>
 </head>
+
 <body>
-<h1>todoist simplifier and week ext.</h1>
-<h2 id="title">login</h2>
-<div id="message"></div>
-<div id="login_view">
-    email: <input type="text" id="email" /><br />
-    password: <input type="password" id="password" /><br />
-    <input type="button" value="login" onclick="weeklyTodoGUI.login()" />
-</div>
-<div id="weekly_view">
-</div>
+    <h1>todoist simplifier and week ext.</h1>
+    <h2 id="title">login</h2>
+    <div id="message"></div>
+    <div id="login">
+        email: <input type="text" id="email" /><br />
+        password: <input type="password" id="password" /><br />
+        <input type="button" value="login" onclick="gui.login()" />
+    </div>
 
 </body>
+
 </html>
