@@ -1,25 +1,32 @@
 <html>
-
-<head id="head">
-<title>Freddots todoist simplifier and week extension</title>
-<link rel="stylesheet" type="text/css" href="style/mystyle.css" />
-<script src="js/debug.js" type="text/javascript" id="debug"></script>
-<script src="js/dateext.js" type="text/javascript" id="dateext"></script>
-<script src="js/helper.js" type="text/javascript" id="helper"></script>
-<script src="js/api.js" type="text/javascript" id="api"></script>
-<script src="js/gui.js" type="text/javascript" id="gui"></script>
+<head>
+<title>weeklytodo</title>
+<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+<script type="text/javascript" src="js/debug.js"></script>
+<script type="text/javascript" src="js/helper.js"></script>
+<script type="text/javascript" src="js/dateext.js"></script>
+<script type="text/javascript" src="js/bloggerhandlers.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<link rel="stylesheet" type="text/css" href="style/style.css" />
 </head>
 
 <body>
-    <h1>todoist simplifier and week ext.</h1>
-    <h2 id="title">login</h2>
-    <div id="message"></div>
-    <div id="login">
-        email: <input type="text" id="email" /><br />
-        password: <input type="password" id="password" /><br />
-        <input type="button" value="login" onclick="gui.login()" />
+
+<img src="woot.png" width=1 height=1 />
+
+<div id="menu">
+    <input id="login" type="button" value="login" onclick="weeklytodo.logIn()" />
+    <input id="logout" type="button" value="logout" onclick="weeklytodo.logOut()" />
+</div>
+
+<div id="page">
+    <h2 id="title"></h2>
+    <textarea id="content" rows=25 cols=90 onchange="weeklytodo.setEnableCommit(true)"></textarea>
+    <div id="footer">
+        <div id="message">21:12:00 - some message..</div>
+        <input id="commit" type="button" value="commit" onclick="weeklytodo.commit()" />
     </div>
+</div>
 
 </body>
-
 </html>

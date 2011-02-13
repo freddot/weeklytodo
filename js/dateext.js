@@ -1,12 +1,3 @@
-Date.prototype.todoStringDay = function() {
-    return this.getDate() + "-" + (this.getMonth() + 1) + "-" + this.getFullYear();
-};
-
-Date.prototype.todoStringMinute = function() {
-    var hours = this.getHours();
-    var minutes = this.getMinutes();
-    return this.todoStringDay() + " @ " + (hours < 10 ? "0" : "") + hours + ":" + (minutes < 10 ? "0" : "") + minutes;
-};
 
 Date.prototype.offsetByWeek = function(offset) {
     this.setTime(this.getTime() + offset * (7 * 24 * 60 * 60 * 1000));
