@@ -31,7 +31,8 @@ var weeklytodo = (function() {
                         createNew = true;
                         rows = post.getContent().getText().split('<br />');
                         re = /^\s*DONE/g;
-                        for (var i = 0, row; row = rows[i]; i++) {
+                        for (var i = 0, row; i < rows.length; i++) {
+                            row = rows[i];
                             if (!re.test(row)) {
                                 newContent += row + '\n';
                             }
