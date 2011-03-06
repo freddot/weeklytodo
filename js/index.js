@@ -9,6 +9,7 @@ var weeklytodo = (function() {
         
         if (!google.accounts.user.checkLogin(scope)) {
             showLoggedOut();
+            setMessage("log in failed mysteriously...");
             return;
         }
         showLoggedIn();
@@ -30,15 +31,19 @@ var weeklytodo = (function() {
                     if (created.getFullYear() !== today.getFullYear() || (created.getFullYear() === today.getFullYear() && created.getWeek() !== today.getWeek())) {
                         createNew = true;
                         rows = post.getContent().getText().split('<br />');
-                        re = /^\s*DONE/g;
+                        re = /^\s*done/gi;
                         for (var i = 0, row; i < rows.length; i++) {
                             row = rows[i];
-                            if (!re.test(row)) {
+                            // console.log("RE: " + row.match(re) + " - " + row);
+                            if (row.match(re) === null) {
+                                // console.log("adding: " + row);
                                 newContent += row + '\n';
                             }
                         }
                     }
                 }
+                
+                // log("newContent: " + newContent);
                 
                 if (createNew) {
                     setMessage("creating new post for this week...");
