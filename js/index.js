@@ -138,7 +138,7 @@ var weeklytodo = (function() {
 
 
 //google.load("gdata", "1.s");
-google.load("gdata", "1.x", { packages : ["blogger"] });
+google.load("gdata", "2.x", { packages : ["blogger"] });
 google.setOnLoadCallback(function() {
     bloggerService = new google.gdata.blogger.BloggerService('weeklytodo-1.0');
     weeklytodo.init();
